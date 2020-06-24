@@ -1,0 +1,13 @@
+Generation of lammps data from sphere.stl mesh file.
+
+163 atoms
+483 bonds
+322 angles
+483 dihedrals
+0 impropers
+
+1 atom types
+483 bond types
+322 angle types
+483 dihedral types
+0 improper types
