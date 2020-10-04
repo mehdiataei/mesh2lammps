@@ -48,6 +48,6 @@ $ ./mpirun -np 8 bucket2D bucket2D.xml
 
 ![Red-blood cell example](imgs/RBCExample.png)
 
-# Getting help and bug report
+## Getting help and bug report
 
 Please submit an issue if you found a bug in the program or needed help with the software.
