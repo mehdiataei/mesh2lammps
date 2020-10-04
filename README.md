@@ -1,4 +1,4 @@
-![Cover Photo of a mesh and lammmps structure](imgs/CoverPhoto)
+![Cover Photo of a mesh and lammmps structure](imgs/CoverPhoto.png)
 # mesh2lammps
 Mesh2Lammps is an open-source software to convert triangular unstructured meshes to course-grained LAMMPS molecular input files.
 
@@ -46,7 +46,7 @@ To run the example in parallel using 8 cores for example:
 $ ./mpirun -np 8 bucket2D bucket2D.xml
 ```
 
-![Red-blood cell example](imgs/CoverPhoto)
+![Red-blood cell example](imgs/RBCExample.png)
 
 # Getting help and bug report
 
