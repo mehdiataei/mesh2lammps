@@ -1,14 +1,14 @@
 ![Cover Photo of a mesh and lammmps structure](imgs/CoverPhoto.png)
-# mesh2lammps
+# Mesh2Lammps
 Mesh2Lammps is an open-source software to convert triangular unstructured meshes to course-grained LAMMPS molecular input files.
 
 # Installation
-You can perform a minimal install of gym with:
+You can perform a minimal install of Mesh2Lammps with:
 
 ```
-git clone https://github.com/mehdiataei/mesh2lammps
-cd mesh2lammps
-python3 setup.py install 
+$ git clone https://github.com/mehdiataei/mesh2lammps
+$ cd mesh2lammps
+$ python setup.py install 
 
 ```
 If you prefer, you can do a minimal install of the packaged version directly from PyPI:
@@ -26,25 +26,26 @@ $ git clone https://github.com/mehdiataei/LBfoam.git
 ```
 
 
-Compile the `bucket2D` example:
+Converting LAMMPS input file to mesh data and vice versa for the `RBC` example:
 ```
-$ cd examples/lbfoam/bucket2D
-$ make
-```
-
-(Note: To compile the software on MacOS, uncomment the ` -DPLB_MAC_OS_X` compilation flag in the Makefile).
-
-Run the example using the following command:
+$ cd samples/RBC/
 
 ```
-$ ./bucket2D bucket2D.xml
-```
 
-To run the example in parallel using 8 cores for example:
+In this directory there is a mesh file `rbc.stl`. To generate the LAMMPS input:
+```
+$ mesh2lammps rbc.stl
 
 ```
-$ ./mpirun -np 8 bucket2D bucket2D.xml
+Now, ` mesh.data ` fiile is generated which can be used as LAMMPS input data.
+
+Likewise, you can generate the mesh file from the LAMMPS input file including `rbc_atoms.csv` and `rbc_faces.csv`. To do this:
 ```
+$ lammps2mesh rbc_atoms.csv rbc_faces.csv
+
+```
+Now, you have created the `rbc.stl` mesh file.
+
 
 ![Red-blood cell example](imgs/RBCExample.png)
 
